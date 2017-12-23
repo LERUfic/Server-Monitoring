@@ -1,0 +1,26 @@
+[controller]
+Berfungsi sebagai "otak" jadi berisi fungsi-fungsi yang membuat web paham harus bagaimana jika terjadi event
+/bower_components/controller
+
+[middleware]
+fungsinya sebagai penengah antara request dan controller (lebih difungsikan untuk autentifikasi login)
+/middleware
+
+[routes]
+fungsinya untuk mengatur proses routing web. nantinya perlu kolaborasi dengan server.js untuk pengaturannya
+/routes
+
+[views]
+fungsinya sebagai frontend dari web inventarisasi
+/views
+├── index.ejs -> tujuan dari menu dashboard
+└── partials -> pecahan-pecahan agar lebih terkelompok
+    ├── aside.ejs -> pengatur sidebar
+    ├── body.ejs -> isinya div dari semua halaman
+    ├── content.ejs -> body content
+    ├── contoh konten.ejs -> contoh saja
+    ├── footer.ejs -> ya footer
+    ├── head.ejs -> <head>
+    ├── header.ejs -> header atas yang ada gambar usernya
+    ├── modals.ejs -> berisi modals untuk di pop up 
+    └── tail.ejs -> js pada bagian bawah setelah body
