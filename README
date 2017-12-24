@@ -1,6 +1,6 @@
 [controller]
 Berfungsi sebagai "otak" jadi berisi fungsi-fungsi yang membuat web paham harus bagaimana jika terjadi event
-/bower_components/controller
+/controller
 
 [middleware]
 fungsinya sebagai penengah antara request dan controller (lebih difungsikan untuk autentifikasi login)
@@ -22,5 +22,5 @@ fungsinya sebagai frontend dari web inventarisasi
     ├── footer.ejs -> ya footer
     ├── head.ejs -> <head>
     ├── header.ejs -> header atas yang ada gambar usernya
-    ├── modals.ejs -> berisi modals untuk di pop up 
+    ├── modals.ejs -> berisi modals untuk di pop up
     └── tail.ejs -> js pada bagian bawah setelah body
