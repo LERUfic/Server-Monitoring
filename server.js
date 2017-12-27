@@ -9,7 +9,7 @@ var express_validator = require('express-validator');
 var app = express();
 var http = require('http').Server(app);
 
-var routes = require ('./routes/routing');
+var routes = require('./routes/routing');
 
 app.set("views",path.join(__dirname,"views"));
 app.set("view engine","ejs");
@@ -21,6 +21,8 @@ app.use(express.static(path.join(__dirname,"bower_components")));
 app.use('/root', express.static(path.join(__dirname,"")));
 
 app.use('/', routes);
+app.use('/login', routes);
+
 
 http.listen(listen_port,function(){
 	console.log('listening on *: '+listen_port);

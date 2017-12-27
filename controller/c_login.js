@@ -1,0 +1,3 @@
+function showModalRegister() {
+  $("#modalRegister").modal();
+}

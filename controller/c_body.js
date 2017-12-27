@@ -1,6 +1,5 @@
 $(document).ready(function(){
   $( "#divData" ).load( "/root/views/partials/body.ejs #dashboard" );
-    console.log("masuk");
 });
 
 $('#invenList').click(function(){changeListBarang();return false;});
@@ -8,7 +7,7 @@ $('#invenAdd').click(function(){changeTambahBarang();return false;});
 $('#resList').click(function(){changeListPeminjam();return false;});
 $('#resRes').click(function(){changeReservasi();return false;});
 
-function changeListBarang(){
+function changeListBaratuing(){
   $( "#divData" ).load( "/root/views/partials/body.ejs #list_barang" );
 }
 
@@ -23,3 +22,4 @@ function changeListPeminjam(){
 function changeReservasi(){
   $( "#divData" ).load( "/root/views/partials/body.ejs #reservasi" );
 }
+<!--index.js end-->

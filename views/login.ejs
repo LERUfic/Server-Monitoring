@@ -1,0 +1,48 @@
+<% include partials/head %>
+
+<body class="skin-black-light" style="background-color:#f9f9f9;">
+    <header>
+      <center>
+          <img src="/root/public/images/logo_blue.png" height="125" style="padding-top:1.5%;">
+          <br>
+          <h1><b>Inventaris AJK</b></h1>
+      </center>
+      <hr size="20" style="width:70%; text-align:center;">
+		</header>
+
+    <div class="content">
+      <div class="login-box" style="margin-top:0%;">
+        <div class="login-box-body">
+          <form action="/dashboard" method="GET">
+            <div class="form-group has-feedback">
+              <input type="text" class="form-control" placeholder="NRP" name="nrp">
+            </div>
+            <div class="form-group has-feedback">
+              <input type="password" class="form-control" placeholder="Password" name="password">
+            </div>
+            <div class="row">
+              <div class="col-xs-8">
+              </div>
+              <div class="col-xs-4">
+                <button type="submit" class="btn btn-primary btn-block btn-flat">Sign In</button>
+              </div>
+            </div>
+          </form>
+          <a href="#" onclick="showModalRegister();return false;" class="text-center" id="linkModalRegister"> Register a New Account</a>
+        </div>
+      </div>
+		</div>
+
+    <hr>
+
+    <footer style="padding-left:1.5%;">
+      <div class="pull-right hidden-xs" style="padding-right:1.5%;">
+        <b>Version</b> 0.0.2
+      </div>
+        <strong>Copyright &copy; 2017 <a href="http://ajk.if.its.ac.id">Arsitektur dan Jaringan Komputer</a>.</strong> All rights
+        reserved.
+		</footer>
+
+<script src="/root/controller/c_login.js"></script>
+<% include partials/modals %>
+<% include partials/tail %>

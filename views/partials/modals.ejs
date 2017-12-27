@@ -16,3 +16,42 @@
   </div>
 </div>
 <!-- Modal Edit List Barang Section End-->
+
+<!-- Modal Register Akun Baru Section Start-->
+<div id="modalRegister" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Create New Account</h4>
+      </div>
+      <div class="modal-body">
+        <div class="login-box" style="margin-top:0%;">
+          <div class="login-box-body">
+            <form action="/register" method="post">
+              <div class="form-group has-feedback">
+                <input type="text" class="form-control" placeholder="NRP" name="nrp">
+              </div>
+              <div class="form-group has-feedback">
+                <input type="text" class="form-control" placeholder="Nama" name="nama">
+              </div>
+              <div class="form-group has-feedback">
+                <input type="password" class="form-control" placeholder="Password" name="password">
+              </div>
+              <div class="row">
+                <div class="col-xs-8">
+                </div>
+                <div class="col-xs-4">
+                  <button type="submit" class="btn btn-primary btn-block btn-flat">Create</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal Register Akun Baru Section End-->
