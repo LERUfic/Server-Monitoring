@@ -21,7 +21,6 @@ app.use(express.static(path.join(__dirname,"bower_components")));
 app.use('/root', express.static(path.join(__dirname,"")));
 
 app.use('/', routes);
-app.use('/login', routes);
 
 
 http.listen(listen_port,function(){
