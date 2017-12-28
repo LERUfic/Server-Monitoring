@@ -1,7 +1,19 @@
+var express = require('express');
+var app = express();
+var cookieParser = require('cookie-parser');
+var session = require('express-session');
+
+app.use(cookieParser());
+app.use(session({
+  secret: 'buayakecil',
+  resave: true,
+  saveUninitialized: true,
+}));
+
 module.exports = {
   checkAuth: function(req,res,next){
     console.log('masuk');
-    if(!req.session.user_id){
+    if(!req.session.nrp){
       res.redirect('/');
       console.log('sudah login');
     }

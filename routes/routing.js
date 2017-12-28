@@ -1,18 +1,25 @@
 var express = require('express');
 var app = express();
-var session      = require('express-session');
-var middleware = require('../middleware/auth.js');
+var middleware = require('../middleware/auth.js')
 var connection = require('../database/db.js');
-var session      = require('express-session');
+
+var cookieParser = require('cookie-parser');
+var session = require('express-session');
+
+app.use(cookieParser());
+app.use(session({
+  secret: 'buayakecil',
+  resave: false,
+  saveUninitialized: true
+}));
 
 
-app.get('/dashboard',middleware.checkAuth(), function(req,res,next){
+app.get('/dashboard',middleware.checkAuth, function(req,res){
   res.render('index');
 });
 app.get('/', function(req,res,next){
   res.render('login');
 });
-
 
 /* Register request for input Start*/
 app.post('/register', function(req,res,next){
@@ -34,12 +41,22 @@ app.post('/register', function(req,res,next){
 /* Register request for input End*/
 
 /* Login Request Start*/
-app.post('/register', function(req,res,next){
-  var input = JSON.parse(JSON.stringify(req.body));
+app.post('/login', function(req,res){
+  /*var input = JSON.parse(JSON.stringify(req.body));
   var dataNRP = input.nrp;
-  var datapassword = input.password;
+  var datapassword = input.password;*/
+
+  var post = req.body;
+  if(post.nrp === '5116100056' && post.password === 'samaaja'){
+    req.session.nrp = '5116100056';
+    console.log(req.session.nrp);
+    res.redirect('/dashboard');
+  }
+  else{
+    res.redirect('/');
+  }
+
 });
 /* Login Request End*/
-
 
 module.exports = app;

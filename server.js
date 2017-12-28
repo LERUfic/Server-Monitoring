@@ -20,6 +20,8 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname,"bower_components")));
 app.use('/root', express.static(path.join(__dirname,"")));
 
+app.use(favicon(path.join(__dirname, 'public/images', 'logo_blue.png')));
+
 app.use('/', routes);
 
 

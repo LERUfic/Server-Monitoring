@@ -7,7 +7,7 @@ $('#invenAdd').click(function(){changeTambahBarang();return false;});
 $('#resList').click(function(){changeListPeminjam();return false;});
 $('#resRes').click(function(){changeReservasi();return false;});
 
-function changeListBaratuing(){
+function changeListBarang(){
   $( "#divData" ).load( "/root/views/partials/body.ejs #list_barang" );
 }
 
