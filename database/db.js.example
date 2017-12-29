@@ -1,0 +1,18 @@
+var mysql = require('mysql');
+var db_config = {
+  host      : 'localhost',
+  user      : 'namaUser',
+  password  : 'passwordUser',
+  database  : 'dbUser'
+};
+var pool = mysql.createPool(db_config);
+pool.getConnection(function(err,rows){
+  if(err) console.log("Connect to server's database -> Failed (%s)".err)
+  else console.log("Connect to server's database -> Success");
+});
+
+pool.on('error', function(err){
+  console.log(err.code);
+});
+
+module.exports = pool;
