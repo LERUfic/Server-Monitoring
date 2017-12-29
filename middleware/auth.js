@@ -12,14 +12,20 @@ app.use(session({
 
 module.exports = {
   checkAuth: function(req,res,next){
-    console.log('masuk');
     if(!req.session.nrp){
       res.redirect('/');
-      console.log('sudah login');
     }
     else{
       res.header('Cache-Control','no-cache, private, no-store, must-revalidate, max-stale=0, post-check=0, pre-check=0');
         next();
+    }
+  },
+  checkHome: function(req,res,next){
+    if(!req.session.nrp){
+      next();
+    }
+    else{
+        res.redirect('/dashboard');
     }
   }
 };

@@ -22,4 +22,3 @@ function changeListPeminjam(){
 function changeReservasi(){
   $( "#divData" ).load( "/root/views/partials/body.ejs #reservasi" );
 }
-<!--index.js end-->

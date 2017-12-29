@@ -17,7 +17,7 @@ app.use(session({
 app.get('/dashboard',middleware.checkAuth, function(req,res){
   res.render('index');
 });
-app.get('/', function(req,res,next){
+app.get('/',middleware.checkHome, function(req,res,next){
   res.render('login');
 });
 
@@ -58,5 +58,12 @@ app.post('/login', function(req,res){
 
 });
 /* Login Request End*/
+
+/*Logout Request Start*/
+app.get('/logout',function(req,res){
+  delete req.session.nrp;
+  res.redirect('/');
+});
+/*Logout Request End*/
 
 module.exports = app;

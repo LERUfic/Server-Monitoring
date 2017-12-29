@@ -5,7 +5,7 @@
   </center>
 
   <center>
-    <h1>bla bla Management System</h1>
+    <h1>Inventaris Management System</h1>
   </center>
 </div>
 <!-- Dashboard Section End-->
@@ -20,10 +20,31 @@
 <!-- List Barang Section End  -->
 
 <!-- Tambah Barang Section Start  -->
-<div id='tambah_barang'>
-  <center>
-    <h1>Tambah Barang</h1>
-  </center>
+<div id='tambah_barang' class="col-xs-4" >
+		<form method="POST" action="/item/add">
+			<div class="form-group">
+				<label for="barang">Tambah Barang</label>
+				<input type="text" class="form-control" name="namaBarang" placeholder="Nama Barang" required>
+			</div>
+			<div class="form-group">
+					<input type="date" class="form-control" name="dateBarang" placeholder="Tanggal Masuk" required/>
+			</div>
+      <div class="form-group">
+				<input type="text" class="form-control" name="letakBarang" placeholder="Letak Barang" required>
+			</div>
+      <div class="form-group">
+				<input type="text" class="form-control" name="jumlahBarang" placeholder="Jumlah Barang" required>
+			</div>
+      <div class="form-group">
+				<input type="radio" name="kondisiBarang" value="1" checked> Kondisi Baik<br>
+        <input type="radio" name="kondisiBarang" value="0"> Kondisi Rusak
+			</div>
+      <div class="form-group">
+				<input type="radio" name="statusBarang" value="1" checked> Barang Sedang Dipinjam<br>
+        <input type="radio" name="statusBarang" value="0"> Barang Sedang Tidak Dipinjam
+			</div>
+			<button type="submit" class="btn btn-default">Submit</button>
+		</form>
 </div>
 <!-- Tambah Barang Section End  -->
 
