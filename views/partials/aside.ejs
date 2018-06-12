@@ -4,10 +4,10 @@
       <!-- Sidebar user panel -->
       <div class="user-panel">
         <div class="pull-left image">
-          <img src="AdminLTE/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+          <img src="/root/public/images/logo.png" class="img-circle" alt="User Image">
         </div>
         <div class="pull-left info">
-          <p>@User</p>
+          <p>Administrator</p>
         </div>
       </div>
       <!-- sidebar menu: : style can be found in sidebar.less -->
@@ -17,25 +17,26 @@
         <li class="treeview">
           <a href="#">
             <i class="fa fa-cubes"></i>
-            <span>Inventarisasi</span>
+            <span>Web Service</span>
             <i class="fa fa-angle-left pull-right"></i>
           </a>
           <ul class="treeview-menu">
-            <li><a id="invenList" href="#"><i class="fa fa-list"></i>List Barang</a></li>
-            <li><a id="invenAdd" href="#"><i class="fa fa-plus"></i>Tambah Barang</a></li>
+            <li><a id="serviceList" href="/service"><i class="fa fa-list"></i>List Web Service</a></li>
+            <li><a id="serviceAdd" href="/service/add"><i class="fa fa-plus"></i>Tambah Web Service</a></li>
           </ul>
         </li>
         <li class="treeview">
           <a href="#">
             <i class="fa fa-calendar"></i>
-            <span>Reservasi Inventaris</span>
+            <span>Information</span>
             <i class="fa fa-angle-left pull-right"></i>
           </a>
           <ul class="treeview-menu">
-            <li><a id="resList" href="#"><i class="fa fa-list"></i>List Peminjam</a></li>
-            <li><a id="resRes" href="#"><i class="fa fa-calendar-plus-o"></i>Reservasi</a></li>
+            <li><a id="sysInfo" href="/system"><i class="fa fa-list"></i>System</a></li>
+            <li><a id="netInfo" href="/network"><i class="fa fa-calendar-plus-o"></i>Networking</a></li>
           </ul>
         </li>
+        <li><a id="webtty" href="/webtty"><i class="fa fa-dashboard"></i> <span>Web Terminal</span></a></li>
       </ul>
     </section>
     <!-- /.sidebar -->

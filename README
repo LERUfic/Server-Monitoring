@@ -1,5 +1,5 @@
 [controller]
-Berfungsi sebagai "otak" jadi berisi fungsi-fungsi yang membuat web paham harus bagaimana jika terjadi event
+Berisi pengendali data dari routing ke tampilan view.
 /controller
 
 [middleware]
@@ -7,7 +7,7 @@ fungsinya sebagai penengah antara request dan controller (lebih difungsikan untu
 /middleware
 
 [routes]
-fungsinya untuk mengatur proses routing web. nantinya perlu kolaborasi dengan server.js untuk pengaturannya
+fungsinya untuk mengatur proses routing web dan sekaligus sebagai penghubung antara DB dan server. nantinya perlu kolaborasi dengan server.js untuk pengaturannya
 /routes
 
 [views]

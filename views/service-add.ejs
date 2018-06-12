@@ -1,0 +1,72 @@
+<% include partials/head %>
+
+<body class="hold-transition skin-blue sidebar-mini">
+	<div class="wrapper">
+
+		<header class="main-header">
+			<% include partials/header %>
+		</header>
+
+		<aside class="main-sidebar">
+			<% include partials/aside %>
+		</aside>
+
+		<div class="content-wrapper">
+			<section class="content-header"></section>
+			<section class="content">
+			    <div class="rows">
+			        <div id='tambah_service' class="col-xs-4" >
+						<form method="POST" action="/service/add">
+					    	<label for="barang">Tambah Service</label>
+					      	<div class="container">
+					        	<div class="row">
+					          		<div class="col-sm-4">
+					      				<div class="form-group">
+					      					<input type="text" class="form-control" name="namaService" placeholder="Nama Service" required>
+					      				</div>
+					      				<div class="form-group">
+					      					<input type="text" class="form-control" name="domainService" placeholder="Domain Service" required/>
+					      				</div>
+					            		<div class="form-group">
+					      					<input type="text" class="form-control" name="portService" placeholder="Port Service" required>
+					      				</div>
+							            <div class="form-group">
+							              	<input type="text" class="form-control" name="folderService" placeholder="Folder Service" required>
+							            </div>
+							            <div class="form-group">
+							              	<input type="text" class="form-control" name="webserverService" placeholder="Web Server Service" required>
+							            </div>
+							            <div class="form-group">
+							              <textarea name="descService" cols="45" placeholder="&nbsp;&nbsp;&nbsp;Deskripsi Service"></textarea>
+							      		</div>
+							        </div>
+							        <div class="col-sm-8">
+							        	<div class="form-group">
+							      			<input type="radio" name="httpsService" value="1" checked> Support HTTPS<br>
+							              	<input type="radio" name="httpsService" value="0"> Tidak Support HTTPS
+							      		</div>
+							            <div class="form-group">
+							      			<input type="radio" name="statusService" value="1" checked> Service Aktif<br>
+							              	<input type="radio" name="statusService" value="0"> Service Mati
+							      		</div>
+							      			<button type="submit" class="btn btn-default">Submit</button>
+							          	</div>
+					  		  		</div>
+					      		</div>
+					      	</div>
+						</form>
+					</div>
+			    </div>
+			    <% include modals %>
+			</section>
+		</div>
+
+		<footer class="main-footer">
+			<% include partials/footer %>
+		</footer>
+
+		  <div class="control-sidebar-bg"></div>
+	</div>
+<% include partials/tail %>
+<script src="/root/controller/c_getData.js"></script>
+<% include partials/close %>

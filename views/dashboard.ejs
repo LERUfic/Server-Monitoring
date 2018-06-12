@@ -12,7 +12,20 @@
 		</aside>
 
 		<div class="content-wrapper">
-			<% include partials/content %>
+			<section class="content-header"></section>
+			<section class="content">
+			    <div class="rows">
+			        <div id='dashboard'>
+			            <center>
+			                <h1>Welcome <b>Aguel Satria Wijaya</b></h1>
+			            </center>
+			            <center>
+			                <h1>Server Monitoring System</h1>
+			            </center>
+			        </div>
+			    </div>
+			    <% include partials/modals %>
+			</section>
 		</div>
 
 		<footer class="main-footer">
@@ -23,4 +36,4 @@
 	</div>
 
 <% include partials/tail %>
-<script src="/root/controller/c_body.js"></script>
+<% include partials/close %>

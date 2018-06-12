@@ -1,0 +1,66 @@
+<% include partials/head %>
+
+<body class="hold-transition skin-blue sidebar-mini">
+	<div class="wrapper">
+
+		<header class="main-header">
+			<% include partials/header %>
+		</header>
+
+		<aside class="main-sidebar">
+			<% include partials/aside %>
+		</aside>
+
+		<div class="content-wrapper">
+			<section class="content-header"></section>
+			<section class="content">
+			    <div class="rows">
+			        <div id="service-list">
+			            <div id="tableData">
+			            	<table class="table">
+					            <tr>
+					                <th>No</th>
+					                <th>Nama</th>
+					                <th>Domain</th>
+					                <th colspan="2">Action</th>
+					            </tr>
+					            
+					            <% var no=1 %>
+					            <% if (result) { %>
+					            <% result.forEach(function(row){ %>
+					                <tr>
+					                    <td><%= no %><% no++ %></td>
+					                    <td><a href="#" id="callDetail" data-id="<%= row.id %>"><%= row.nama %></a></td>
+					                    <td><%= row.domain %></td>
+					                    <td>
+					                    	<a href='/service/edit/<%= row.id %>' class="button">Edit</a> 
+					                    </td>
+					                    <td>
+					                    	<form method="post" action="/service/delete/<%= row.id %>">
+					                        	<input type="submit" name="delete" value='Delete' onClick="return confirm('Anda Yakin?')" />
+					                            <input type="hidden" name="_method" value="DELETE" />
+					                        </form>
+					                    </td>
+					                </tr>
+					            <% }) %>
+					            <% } %>
+					        </table>
+			            </div>
+			        </div>
+			    </div>
+			    <% include partials/modals %>
+			</section>
+		</div>
+
+		<footer class="main-footer">
+			<% include partials/footer %>
+		</footer>
+
+		  <div class="control-sidebar-bg"></div>
+	</div>
+
+<% include partials/modals %>
+<% include partials/tail %>
+<script src="/root/controller/c_getData.js"></script>
+<% include partials/close %>
+

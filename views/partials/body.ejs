@@ -1,17 +1,5 @@
-<!-- Dashboard Section Start-->
-<div id='dashboard'>
-  <center>
-    <h1>Welcome @USER</h1>
-  </center>
-
-  <center>
-    <h1>Inventaris Management System</h1>
-  </center>
-</div>
-<!-- Dashboard Section End-->
-
 <!-- List Barang Section Start  -->
-<div id='list_barang'>
+<div id='list_service'>
   <center>
     <h1>List Barang</h1>
   </center>
@@ -19,37 +7,8 @@
 </div>
 <!-- List Barang Section End  -->
 
-<!-- Tambah Barang Section Start  -->
-<div id='tambah_barang' class="col-xs-4" >
-		<form method="POST" action="/item/add">
-			<div class="form-group">
-				<label for="barang">Tambah Barang</label>
-				<input type="text" class="form-control" name="namaBarang" placeholder="Nama Barang" required>
-			</div>
-			<div class="form-group">
-					<input type="date" class="form-control" name="dateBarang" placeholder="Tanggal Masuk" required/>
-			</div>
-      <div class="form-group">
-				<input type="text" class="form-control" name="letakBarang" placeholder="Letak Barang" required>
-			</div>
-      <div class="form-group">
-				<input type="text" class="form-control" name="jumlahBarang" placeholder="Jumlah Barang" required>
-			</div>
-      <div class="form-group">
-				<input type="radio" name="kondisiBarang" value="1" checked> Kondisi Baik<br>
-        <input type="radio" name="kondisiBarang" value="0"> Kondisi Rusak
-			</div>
-      <div class="form-group">
-				<input type="radio" name="statusBarang" value="1" checked> Barang Sedang Dipinjam<br>
-        <input type="radio" name="statusBarang" value="0"> Barang Sedang Tidak Dipinjam
-			</div>
-			<button type="submit" class="btn btn-default">Submit</button>
-		</form>
-</div>
-<!-- Tambah Barang Section End  -->
-
 <!-- List Peminjam Section Start  -->
-<div id='list_peminjam'>
+<div id='system_information'>
   <center>
     <h1>List Peminjam</h1>
   </center>
@@ -57,9 +16,17 @@
 <!-- List Peminjam Section End  -->
 
 <!-- Reservasi Section Start  -->
-<div id='reservasi'>
+<div id='network_information'>
   <center>
     <h1>Reservasi Barang</h1>
   </center>
 </div>
 <!-- Reservasi Section End  -->
+
+<!-- List Peminjam Section Start  -->
+<div id='webtty'>
+  <center>
+    <h1>Web Terminal</h1>
+  </center>
+</div>
+<!-- List Peminjam Section End  -->

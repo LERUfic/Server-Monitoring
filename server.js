@@ -1,4 +1,12 @@
-var listen_port=50656;
+// Wahai para coder!!!
+// Ini adalah catatan kecil dari programer program ini
+// Sejujurnya saya sudah lupa bagaimana ngding di nodeJS
+// saya tidak tahu bagaimana kode saya ini bekerja.....
+// Sudah hampir 6 bulan saya tidak ngoding nodeJS dan hal ini membuat saya tidak tahu apakah semua ini diperlukan
+//
+// Programmer: Aguel Satria Wijaya
+
+var listen_port=8000;
 var express = require('express');
 var path = require("path");
 var favicon = require('serve-favicon');
@@ -20,7 +28,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname,"bower_components")));
 app.use('/root', express.static(path.join(__dirname,"")));
 
-app.use(favicon(path.join(__dirname, 'public/images', 'logo_blue.png')));
+app.use(favicon(path.join(__dirname, 'public/images', 'logo.png')));
 
 app.use('/', routes);
 
